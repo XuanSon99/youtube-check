@@ -1,0 +1,105 @@
+body {
+    margin: 0;
+}
+.ss-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+.ss-container .ss-item {
+  position: absolute;
+  z-index: -100;
+  height: 100%;
+  width: 100%;
+  transition-timing-function: ease-in-out;
+}
+.ss-container .ss-item.ss-moving {
+  z-index: 100 !important;
+}
+.ss-container .ss-item.ss-fade {
+  opacity: 0;
+}
+.ss-container .ss-item.ss-fade.active {
+  opacity: 1;
+  z-index: 1;
+}
+.ss-container .ss-item.ss-move-up {
+  top: 100%;
+}
+.ss-container .ss-item.ss-move-up.ss-move-next {
+  top: 100%;
+}
+.ss-container .ss-item.ss-move-up.ss-move-prev {
+  top: -100%;
+}
+.ss-container .ss-item.ss-move-up.active {
+  top: 0;
+  z-index: 1000 !important;
+}
+.ss-container .ss-item.ss-move-down {
+  top: -100%;
+}
+.ss-container .ss-item.ss-move-down.ss-move-next {
+  top: -100%;
+}
+.ss-container .ss-item.ss-move-down.ss-move-prev {
+  top: 100%;
+}
+.ss-container .ss-item.ss-move-down.active {
+  top: 0;
+  z-index: 1000 !important;
+}
+.ss-container .ss-item.ss-move-right {
+  right: 100%;
+}
+.ss-container .ss-item.ss-move-right.ss-move-next {
+  right: 100%;
+}
+.ss-container .ss-item.ss-move-right.ss-move-prev {
+  right: -100%;
+}
+.ss-container .ss-item.ss-move-right.active {
+  right: 0 !important;
+  z-index: 1000 !important;
+}
+.ss-container .ss-item.ss-move-left {
+  right: -100%;
+}
+.ss-container .ss-item.ss-move-left.ss-move-next {
+  right: -100%;
+}
+.ss-container .ss-item.ss-move-left.ss-move-prev {
+  right: 100%;
+}
+.ss-container .ss-item.ss-move-left.active {
+  right: 0;
+  z-index: 1000 !important;
+}
+
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7ddd4;
+  font-family: "Roboto";
+}
+body h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2e3409;
+}
+
+.ss-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ss-item h1 {
+  color: white;
+  font-size: 100px;
+}
